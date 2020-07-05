@@ -1594,7 +1594,7 @@
 				</span>
 			
 	</script>
-	
+
 
 	<script id="news-template" type="x-tmpl-mustache">
 
@@ -1614,7 +1614,7 @@
 			
    </script>
 
-	
+
 
 
 
@@ -1825,9 +1825,9 @@
 															<div id="news-container_4581" class="news-container"
 																style="max-width: 100%">
 																<ul id="news-content">
-																	
-																	
-																	
+
+
+
 																</ul>
 															</div>
 															<script type="text/javascript">
@@ -2566,7 +2566,7 @@
 								<div class="col-md-9">
 									<marquee id="topbar" behavior="scroll" direction="left" onmouseover="this.stop();"
 										onmouseout="this.start();">
-										
+
 									</marquee>
 								</div>
 							</div>
@@ -2587,7 +2587,7 @@
 	<script type="text/javascript">
 		var i = 0;
 		jQuery.ajax({
-			url: "https://admin.essencegateacademy.org/topbar.php",
+			url: "https://payment.essencegateacademy.org/admin/topbar.php",
 			// url : "http://localhost:3000/essence-server/admin/topbar.php",
 			type: 'GET',
 			crossDomain: true,
@@ -2597,7 +2597,7 @@
 
 					jQuery("#topbar").append(Mustache.render(jQuery("#topbar-template").html(), data[i]))
 					jQuery("#news-content").append(Mustache.render(jQuery("#news-template").html(), data[i]))
-          
+
 				}
 
 			},
