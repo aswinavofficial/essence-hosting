@@ -1584,6 +1584,8 @@
 		</style>
 	</noscript>
 
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
 	<script id="topbar-template" type="x-tmpl-mustache">
@@ -1605,7 +1607,7 @@
 						</div>
 						<div style="clear:both"></div>
 						<div class="scrollercontent">
-						{{content}}	
+						{{{content}}}	
 						</div>
 			
 					</div>
@@ -1781,7 +1783,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="wpb_column vc_column_container vc_col-sm-4">
+										<div class="wpb_column vc_column_container vc_col-sm-6">
 											<div class="vc_column-inner ">
 												<div class="wpb_wrapper">
 													<div class="heading heading--5c0b60ba34b17 text-center">
@@ -1829,6 +1831,7 @@
 
 
 																</ul>
+
 															</div>
 															<script type="text/javascript">
 																var $n = jQuery.noConflict();
@@ -1851,11 +1854,11 @@
 												</div>
 											</div>
 										</div>
-										<div class="wpb_column vc_column_container vc_col-sm-2">
+										<!-- <div class="wpb_column vc_column_container vc_col-sm-2">
 											<div class="vc_column-inner ">
 												<div class="wpb_wrapper"></div>
 											</div>
-										</div>
+										</div> -->
 									</div>
 									<div class="vc_row wpb_row vc_inner vc_row-fluid">
 										<div class="wpb_column vc_column_container vc_col-sm-12">
@@ -2345,11 +2348,10 @@
 					<div class="column col-md-3 footer-4">
 						<div class="widgets">
 							<div id="edupro_contact_info_widget-1" class="widget widget__contact-info">
-								<p class="phone"><a
-										href="https://api.whatsapp.com/send?phone=919947954348%20index.html"><i
-											class="fa fa-phone"></i>+919947954348
+								<p class="phone"><a href="https://api.whatsapp.com/send?phone=918943461330"><i
+											class="fa fa-phone"></i>+918943461330
 									</a></p>
-								<p class="phone"><a href="mailto:info@essencegateacademy.orgindex.html"><i
+								<p class="phone"><a href="mailto:info@essencegateacademy.org"><i
 											class="fa fa-envelope"></i>info@essencegateacademy.org
 									</a></p>
 								<p class="phone"><i class="fa fa-map-marker"></i>M/S. ESSENCE GATE ACADEMY,
@@ -2519,6 +2521,8 @@
 				for (i = 0; i < data.length; i++) {
 
 					jQuery("#topbar").append(Mustache.render(jQuery("#topbar-template").html(), data[i]))
+
+					// data[i].content = marked(data[i].content);
 					jQuery("#news-content").append(Mustache.render(jQuery("#news-template").html(), data[i]))
 
 				}
